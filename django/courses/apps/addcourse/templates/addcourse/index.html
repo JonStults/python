@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Add a new course</h3>
+    <form class="" action="/add_course" method="post">
+      {% csrf_token %}
+      <p>Name:<input type="text" name="name" value=""></p>
+      <p>Description:<textarea name="description" rows="8" cols="40"></textarea></p>
+      <p><input type="submit" name="btn" value="Add"></p>
+    </form>
+    <h3>Courses</h3>
+    <table>
+      <tr>
+        <th>Course Name</th>
+        <th>Description</th>
+        <th>Date Added</th>
+        <th>Actions</th>
+      </tr>
+      {% for class in classes %}
+        <tr>
+          <td>
+            {{class.name}}
+          </td>
+          <td>
+            {{class.description}}
+          </td>
+          <td>
+            {{class.created_at}}
+          </td>
+          <td><a href="/destroy/{{class.id}}">Remove</a></td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/postmsg" method="post">
+      Post a message:
+      <input type="textarea" name="message" value="">
+      <input type="submit" name="messagepost" value="Post Message">
+    </form>
+    {%for message in messages%}
+      {{message['message']}}
+    {% endfor %}
+  </body>
+</html>

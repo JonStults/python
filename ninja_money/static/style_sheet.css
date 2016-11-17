@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#header{
+height: 35px;
+width: 300px;
+}
+
+#body{
+  width: 960px;
+}
+
+#farm {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+#cave {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+
+}
+
+#house {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+
+}
+
+#casino {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+
+}

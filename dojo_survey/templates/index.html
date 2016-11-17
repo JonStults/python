@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Survey</title>
+    <style media="screen">
+      /*.form {
+        display: block;
+      }*/
+
+      /*.wrapper {
+        display: block;
+        height: 800px;
+      }*/
+
+      .p{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="/process_info" method="post">
+        <p class="p">Your Name: <input type="text" name="name" value=""></p>
+        <p class="p">Dojo Location: <select name="location"></p>
+          <option value="Chicago">Chicago</option>
+          <option value="Seattle">Seattle</option>
+          <option value="San Francisco">San Francisco</option>
+        </select>
+        <p class="p">Favorite Language: <select class="info" name="language"></p>
+          <option value="Python">Python</option>
+          <option value="Ruby">Ruby</option>
+          <option value="Javascript">JavaScript</option>
+        </select>
+        <p class="p">Comment (optional):</p>
+        <p class="p"><textarea class="info" name="comments" rows="8" cols="40"></textarea></p>
+        <p class="p"><input class="info" type="submit" name="comments" value="Submit"></p>
+      </form>
+    </div>
+  </body>
+</html>
